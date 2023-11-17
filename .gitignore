@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+youtoxic_english_1000.csv
 
 # C extensions
 *.so
