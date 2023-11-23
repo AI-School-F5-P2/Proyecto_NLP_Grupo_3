@@ -5,13 +5,13 @@ from transformers import DistilBertForSequenceClassification, DistilBertTokenize
 
 class ClasificadorTexto:
     def __init__(self, ):
-        # self.ruta_relativa = 'mymodelo'
-        # self.ruta_absoluta =os.path.abspath(self.ruta_relativa)
-        # self.model_directory = self.ruta_absoluta.replace('\\', '/')
+        self.ruta_relativa = 'modelo_analyzer/mymodelo'
+        self.ruta_absoluta =os.path.abspath(self.ruta_relativa)
+        self.model_directory = self.ruta_absoluta.replace('\\', '/')
         # print(self.model_directory)
-        self.model_directory="C:/Users/maikol/Desktop/curso inteligencia artificial/proyectos grupales/Proyecto_NLP_Grupo_3/principal/backend/api_comment_analyzer/modelo_analyzer/mymodelo"
-        self.model = DistilBertForSequenceClassification.from_pretrained(self.model_directory)
-        self.tokenizer = DistilBertTokenizer.from_pretrained(self.model_directory)
+        # self.model_directory="C:/Users/maikol/Desktop/curso inteligencia artificial/proyectos grupales/Proyecto_NLP_Grupo_3/principal/backend/api_comment_analyzer/modelo_analyzer/mymodelo"
+        self.model = DistilBertForSequenceClassification.from_pretrained(str(self.model_directory))
+        self.tokenizer = DistilBertTokenizer.from_pretrained(str(self.model_directory))
 
         
 
